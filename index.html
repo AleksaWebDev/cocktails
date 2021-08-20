@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма для коктейлей</title>
+
+  <link rel="stylesheet" href="css/new-style.css">
+
+  <!-- scripts -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="scripts/new-script.js"></script>
+</head>
+<body>
+  <form id="form" class="form form_def-size" action="action.php" method="post">
+    <div class="form__wrapper">
+
+      <!-- about author and design -->
+
+      <address class="form__author author">
+        <div class="author__design">
+          Работа на конкурс «Дизайн формы» от 
+          <a class="author__link" href="http://htmlbook.ru/practical/forma-dlya-kokteilei" target="_blank">htmlbook.ru</a>
+        </div>
+        <div class="author__name">
+          &copy; Verder
+        </div>
+      </address>
+
+      <!-- section description -->
+
+      <div class="form__description-sec 
+      gradient-border 
+      gradient-border_4rcorners">
+        <fieldset class="fieldset fieldset_background fieldset_with-oval-legend">
+          <legend class="fieldset__legend-oval fieldset__legend-oval_orange">Описание</legend>
+
+          <div class="form__description-grid-container">
+            <header class="form__title">
+              <h1>О вкусах не спорят.</h1>
+              <p>Выбери свой напиток.</p>
+              <div class="form__title-photo">
+                <img src="img/cocktail.png" alt="cocktail">
+              </div>
+            </header>
+
+            <div class="form__container-fields">
+              <label class="fieldset__label" for="cocktail-name">Название коктейля:</label>
+              <input class="fieldset__input fieldset__input_for-text" id="cocktail-name" type="text" name="cocktail-name" required="">
+
+              <label class="fieldset__label" for="alt-cocktail-name">Альтернативные названия (через запятую):</label>
+              <input class="fieldset__input fieldset__input_for-text" id="alt-cocktail-name" type="text" name="alt-cocktail-name">
+
+              <label class="fieldset__label" for="short-description">Краткое описание:</label>
+              <textarea class="fieldset__textarea" id="short-description" name="short-description" required=""></textarea>
+
+              <label class="fieldset__label" for="instruction">Инструкция для приготовления:</label>
+              <textarea class="fieldset__textarea" id="instruction" name="instruction" required=""></textarea>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- sections ingredients & options -->
+
+      <div class="form__ingredients-options-container">
+
+        <!-- section ingredients -->
+
+        <div class="form__ingredients-sec 
+      gradient-border 
+      gradient-border_4rcorners">
+          <fieldset class="fieldset fieldset_background fieldset_with-oval-legend">
+            <legend  class="fieldset__legend-oval fieldset__legend-oval_green">Ингредиенты</legend>
+
+            <table class="fieldset__table">
+              <thead>
+                <tr>
+                  <th>Название:</th>
+                  <th>Кол-во:</th>
+                  <th>Единица:</th>
+                  <th>Украшение:</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <select class="fieldset__select" name="ingredient-1">
+                      <option value="no">Нет</option>
+                      <option value="amaretto">Амаретто</option>
+                      <option value="anise">Анис</option>
+                      <option value="bubble-gum">Баббл Гам</option>
+                      <option value="baileys">Бейлиз</option>
+                      <option value="blue-curacao">Блю Курасао</option>
+                      <option value="brownie">Брауни</option>
+                      <option value="grenadine">Гренадин</option>
+                      <option value="izabella">Изабелла</option>
+                      <option value="bitter-lemon" selected="">Bitter Lemon</option>
+                      <option value="tincture-lemon">Настойка «Лимонная»</option>
+                      <option value="lime-juise">Лайм Джус</option>
+                      <option value="latte">Латте</option>
+                      <option value="lichee">Личи</option>
+                      <option value="juniper">Можжевельник</option>
+                      <option value="cucumber">Огурец</option>
+                      <option value="pina_colada">Пина Колада</option>
+                      <option value="rhubarb">Ревень</option>
+                      <option value="sangria">Сангрия</option>
+                      <option value="toffee">Тоффи</option>
+                      <option value="chocolate">Шоколад</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input class="fieldset__input fieldset__input_for-number" type="number" name="quantity-1" value="1" pattern="[1-9]*" title="Введите положительное число">
+                  </td>
+                  <td>
+                    <select class="fieldset__select" name="unit-1">
+                      <option value="empty">-</option>
+                      <option value="l">л.</option>
+                      <option value="ml">мл.</option>
+                      <option value="glass" selected="">Стакан</option>
+                      <option value="spoon">Ложка</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input class="fieldset__input" type="checkbox" name="decoration-1" id="decoration-1"><label class="fieldset__checkbox" for="decoration-1"></label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <select class="fieldset__select" name="ingredient-2">
+                      <option value="no">Нет</option>
+                      <option value="amaretto">Амаретто</option>
+                      <option value="anise">Анис</option>
+                      <option value="bubble-gum">Баббл Гам</option>
+                      <option value="baileys">Бейлиз</option>
+                      <option value="blue-curacao">Блю Курасао</option>
+                      <option value="brownie">Брауни</option>
+                      <option value="grenadine">Гренадин</option>
+                      <option value="izabella">Изабелла</option>
+                      <option value="bitter-lemon">Bitter Lemon</option>
+                      <option value="tincture-lemon" selected="">Настойка «Лимонная»</option>
+                      <option value="lime-juise">Лайм Джус</option>
+                      <option value="latte">Латте</option>
+                      <option value="lichee">Личи</option>
+                      <option value="juniper">Можжевельник</option>
+                      <option value="cucumber">Огурец</option>
+                      <option value="pina-colada">Пина Колада</option>
+                      <option value="rhubarb">Ревень</option>
+                      <option value="sangria">Сангрия</option>
+                      <option value="toffee">Тоффи</option>
+                      <option value="chocolate">Шоколад</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input class="fieldset__input fieldset__input_for-number" type="number" name="quantity-2" value="50" pattern="[1-9]*" title="Введите положительное число">
+                  </td>
+                  <td>
+                    <select class="fieldset__select" name="unit-2">
+                      <option value="empty">-</option>
+                      <option value="l">л.</option>
+                      <option value="ml" selected="">мл.</option>
+                      <option value="glass">Стакан</option>
+                      <option value="spoon">Ложка</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input class="fieldset__input" type="checkbox" name="decoration-2" id="decoration-2"><label class="fieldset__checkbox" for="decoration-2"></label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <select class="fieldset__select" name="ingredient-3">
+                      <option value="no">Нет</option>
+                      <option value="amaretto">Амаретто</option>
+                      <option value="anise">Анис</option>
+                      <option value="bubble-gum">Баббл Гам</option>
+                      <option value="baileys">Бейлиз</option>
+                      <option value="blue-curacao">Блю Курасао</option>
+                      <option value="brownie">Брауни</option>
+                      <option value="grenadine">Гренадин</option>
+                      <option value="izabella">Изабелла</option>
+                      <option value="bitter-lemon">Bitter Lemon</option>
+                      <option value="tincture-lemon">Настойка «Лимонная»</option>
+                      <option value="lime-juise">Лайм Джус</option>
+                      <option value="latte">Латте</option>
+                      <option value="lichee">Личи</option>
+                      <option value="juniper">Можжевельник</option>
+                      <option value="cucumber">Огурец</option>
+                      <option value="pina-colada">Пина Колада</option>
+                      <option value="rhubarb">Ревень</option>
+                      <option value="sangria">Сангрия</option>
+                      <option value="toffee">Тоффи</option>
+                      <option value="chocolate">Шоколад</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input class="fieldset__input fieldset__input_for-number" type="number" name="quantity-3" placeholder="-" pattern="[1-9]*" title="Введите положительное число">
+                  </td>
+                  <td>
+                    <select class="fieldset__select" name="unit-3">
+                      <option value="empty">-</option>
+                      <option value="l">л.</option>
+                      <option value="ml">мл.</option>
+                      <option value="glass">Стакан</option>
+                      <option value="spoon">Ложка</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input class="fieldset__input" type="checkbox" name="decoration-3" checked="" id="decoration-3"><label class="fieldset__checkbox" for="decoration-3"></label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <select class="fieldset__select" name="ingredient-4">
+                      <option value="no">Нет</option>
+                      <option value="amaretto">Амаретто</option>
+                      <option value="anise">Анис</option>
+                      <option value="bubble-gum">Баббл Гам</option>
+                      <option value="baileys">Бейлиз</option>
+                      <option value="blue-curacao">Блю Курасао</option>
+                      <option value="brownie">Брауни</option>
+                      <option value="grenadine">Гренадин</option>
+                      <option value="izabella">Изабелла</option>
+                      <option value="bitter-lemon">Bitter Lemon</option>
+                      <option value="tincture-lemon">Настойка «Лимонная»</option>
+                      <option value="lime-juise">Лайм Джус</option>
+                      <option value="latte">Латте</option>
+                      <option value="lichee">Личи</option>
+                      <option value="juniper">Можжевельник</option>
+                      <option value="cucumber">Огурец</option>
+                      <option value="pina-colada">Пина Колада</option>
+                      <option value="rhubarb">Ревень</option>
+                      <option value="sangria">Сангрия</option>
+                      <option value="toffee">Тоффи</option>
+                      <option value="chocolate">Шоколад</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input class="fieldset__input fieldset__input_for-number" type="number" name="quantity-4" placeholder="-" pattern="[1-9]*" title="Введите положительное число">
+                  </td>
+                  <td>
+                    <select class="fieldset__select" name="unit-4">
+                      <option value="empty">-</option>
+                      <option value="l">л.</option>
+                      <option value="ml">мл.</option>
+                      <option value="glass">Стакан</option>
+                      <option value="spoon">Ложка</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input class="fieldset__input" type="checkbox" name="decoration-4" id="decoration-4"><label class="fieldset__checkbox" for="decoration-4"></label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <select class="fieldset__select" name="ingredient-5">
+                      <option value="no">Нет</option>
+                      <option value="amaretto">Амаретто</option>
+                      <option value="anise">Анис</option>
+                      <option value="bubble-gum">Баббл Гам</option>
+                      <option value="baileys">Бейлиз</option>
+                      <option value="blue-curacao">Блю Курасао</option>
+                      <option value="brownie">Брауни</option>
+                      <option value="grenadine">Гренадин</option>
+                      <option value="izabella">Изабелла</option>
+                      <option value="bitter-lemon">Bitter Lemon</option>
+                      <option value="tincture-lemon">Настойка «Лимонная»</option>
+                      <option value="lime-juise">Лайм Джус</option>
+                      <option value="latte">Латте</option>
+                      <option value="lichee">Личи</option>
+                      <option value="juniper">Можжевельник</option>
+                      <option value="cucumber">Огурец</option>
+                      <option value="pina-colada">Пина Колада</option>
+                      <option value="rhubarb">Ревень</option>
+                      <option value="sangria">Сангрия</option>
+                      <option value="toffee">Тоффи</option>
+                      <option value="chocolate">Шоколад</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input class="fieldset__input fieldset__input_for-number" type="number" name="quantity-5" placeholder="-" pattern="[1-9]*" title="Введите положительное число">
+                  </td>
+                  <td>
+                    <select class="fieldset__select" name="unit-5">
+                      <option value="empty">-</option>
+                      <option value="l">л.</option>
+                      <option value="ml">мл.</option>
+                      <option value="glass">Стакан</option>
+                      <option value="spoon">Ложка</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input class="fieldset__input" type="checkbox" name="decoration-5" id="decoration-5"><label class="fieldset__checkbox" for="decoration-5"></label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <select class="fieldset__select" name="ingredient-6">
+                      <option value="no">Нет</option>
+                      <option value="amaretto">Амаретто</option>
+                      <option value="anise">Анис</option>
+                      <option value="bubble-gum">Баббл Гам</option>
+                      <option value="baileys">Бейлиз</option>
+                      <option value="blue-curacao">Блю Курасао</option>
+                      <option value="brownie">Брауни</option>
+                      <option value="grenadine">Гренадин</option>
+                      <option value="izabella">Изабелла</option>
+                      <option value="bitter-lemon">Bitter Lemon</option>
+                      <option value="tincture-lemon">Настойка «Лимонная»</option>
+                      <option value="lime-juise">Лайм Джус</option>
+                      <option value="latte">Латте</option>
+                      <option value="lichee">Личи</option>
+                      <option value="juniper">Можжевельник</option>
+                      <option value="cucumber">Огурец</option>
+                      <option value="pina-colada">Пина Колада</option>
+                      <option value="rhubarb">Ревень</option>
+                      <option value="sangria">Сангрия</option>
+                      <option value="toffee">Тоффи</option>
+                      <option value="chocolate">Шоколад</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input class="fieldset__input fieldset__input_for-number" type="number" name="quantity-6" placeholder="-" pattern="[1-9]*" title="Введите положительное число">
+                  </td>
+                  <td>
+                    <select class="fieldset__select" name="unit-6">
+                      <option value="empty">-</option>
+                      <option value="l">л.</option>
+                      <option value="ml">мл.</option>
+                      <option value="glass">Стакан</option>
+                      <option value="spoon">Ложка</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input class="fieldset__input" type="checkbox" name="decoration-6" id="decoration-6"><label class="fieldset__checkbox" for="decoration-6"></label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <select class="fieldset__select" name="ingredient-7">
+                      <option value="no">Нет</option>
+                      <option value="amaretto">Амаретто</option>
+                      <option value="anise">Анис</option>
+                      <option value="bubble-gum">Баббл Гам</option>
+                      <option value="baileys">Бейлиз</option>
+                      <option value="blue-curacao">Блю Курасао</option>
+                      <option value="brownie">Брауни</option>
+                      <option value="grenadine">Гренадин</option>
+                      <option value="izabella">Изабелла</option>
+                      <option value="bitter-lemon">Bitter Lemon</option>
+                      <option value="tincture-lemon">Настойка «Лимонная»</option>
+                      <option value="lime-juise">Лайм Джус</option>
+                      <option value="latte">Латте</option>
+                      <option value="lichee">Личи</option>
+                      <option value="juniper">Можжевельник</option>
+                      <option value="cucumber">Огурец</option>
+                      <option value="pina-colada">Пина Колада</option>
+                      <option value="rhubarb">Ревень</option>
+                      <option value="sangria">Сангрия</option>
+                      <option value="toffee">Тоффи</option>
+                      <option value="chocolate">Шоколад</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input class="fieldset__input fieldset__input_for-number" type="number" name="quantity-7" placeholder="-" pattern="[1-9]*" title="Введите положительное число">
+                  </td>
+                  <td>
+                    <select class="fieldset__select" name="unit-7">
+                      <option value="empty">-</option>
+                      <option value="l">л.</option>
+                      <option value="ml">мл.</option>
+                      <option value="glass">Стакан</option>
+                      <option value="spoon">Ложка</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input class="fieldset__input" type="checkbox" name="decoration-7" id="decoration-7"><label class="fieldset__checkbox" for="decoration-7"></label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </fieldset>
+        </div>
+
+        <!-- section options -->
+
+        <div class="form__options-sec 
+      gradient-border 
+      gradient-border_4rcorners">
+          <fieldset class="fieldset fieldset_background fieldset_with-oval-legend">
+            <legend class="fieldset__legend-oval fieldset__legend-oval_blue">Параметры</legend>
+
+            <label class="fieldset__label" for="number-portions">Количество порций:</label>
+            <select class="fieldset__select" name="number-portions" id="number-portions">
+              <option value="one">1 порция</option>
+              <option value="two">2 порции</option>
+              <option value="three" selected="">3 порции</option>
+              <option value="four">4 порции</option>
+              <option value="five">5 порций</option>
+              <option value="six">6 порций</option>
+              <option value="seven">7 порций</option>
+              <option value="eight">8 порций</option>
+              <option value="nine">9 порций</option>
+              <option value="ten">10 порций</option>
+            </select>
+            <label class="fieldset__label" for="cooking-time">Время приготовления:</label>
+            <select class="fieldset__select" name="cooking-time" id="cooking-time">
+              <option value="one">1 минута</option>
+              <option value="two">2 минуты</option>
+              <option value="three">3 минуты</option>
+              <option value="four" selected="">4 минуты</option>
+              <option value="five">5 минут</option>
+              <option value="ten">10 минут</option>
+              <option value="fifteen">15 минут</option>
+              <option value="twenty">20 минут</option>
+              <option value="twenty-five">25 минут</option>
+              <option value="thirty">30 минут</option>
+            </select>
+            <label class="fieldset__label" for="cooking-complexity">Сложность приготовления:</label>
+            <select class="fieldset__select" name="cooking-complexity" id="cooking-complexity">
+              <option value="one">Лёгкая (1 балл)</option>
+              <option value="two">Лёгкая (2 балла)</option>
+              <option value="three">Лёгкая (3 балла)</option>
+              <option value="four">Средняя (4 балла)</option>
+              <option value="five">Средняя (5 баллов)</option>
+              <option value="six" selected="">Средняя (6 баллов)</option>
+              <option value="seven">Сложная (7 баллов)</option>
+              <option value="eight">Сложная (8 баллов)</option>
+              <option value="nine">Сложная (9 баллов)</option>
+            </select>
+            <label class="fieldset__label" for="cooking-method">Метод приготовления:</label>
+            <select class="fieldset__select" name="cooking-method" id="cooking-method">
+              <option value="build" selected="">В бокале</option>
+              <option value="stir">Стир</option>
+              <option value="shake">Шейк</option>
+              <option value="blend">Бленд</option>
+            </select>
+          </fieldset>
+        </div>
+      </div>
+
+      <!-- section download photo -->
+
+      <div class="form__photo-sec 
+      gradient-border 
+      gradient-border_4rcorners">
+        <fieldset class="fieldset fieldset_background">
+          <div class="fieldset__title">Фотография:</div>
+
+          <div class="fieldset__container-photo" tabindex="0">
+            <p class="fieldset__photo">
+              <img id="preview" src="img/cocktail_photo.png" alt="Photo of cocktail">
+            </p>
+            <p>Щелкните, чтобы посмотреть в полный размер</p>
+          </div>
+
+          <div class="fieldset__full-cocktail-photo">
+            <img id="fullImg" src="img/cocktail_photo_full.png"  hidden="" alt="Photo of cocktail in full size">
+          </div>
+
+          <div class="fieldset__dotted"></div>
+
+          <div class="fieldset__button-field">
+            <label for="download_photo" class="fieldset__download-button form__button" tabindex="0">Загрузить фото</label>
+            <input id="download_photo" type="file" name="download_photo" hidden="">
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- section type of cocktail -->
+
+      <fieldset class="form__cocktail-type-field fieldset">
+        <legend class="fieldset__legend-square fieldset__legend-square_yellow">Тип коктейля</legend>
+
+        <!-- subsection strongest -->
+
+        <div class="form__strongest-sec strongest-sec 
+      gradient-border 
+      gradient-border_4rcorners">
+          <fieldset class="fieldset fieldset_background">
+            <legend class="fieldset__legend-stripe fieldset__legend-stripe_red">По крепости:</legend>
+
+            <div class="strongest-sec__wrapper">
+              <input class="fieldset__input" id="non-alcoholic" type="radio" name="cocktail-strength" value="non-alcoholic"><!-- 
+              --><label class="fieldset__label" for="non-alcoholic"><span class="fieldset__radio"></span>Безалкогольные</label><!--
+
+              --><input class="fieldset__input" id="low-alcohol" type="radio" name="cocktail-strength" value="low-alcohol"><!--
+              --><label class="fieldset__label" for="low-alcohol"><span class="fieldset__radio"></span>Слабоалкогольные (6-15%)</label><!--
+
+              --><input class="fieldset__input" id="middle-alcohol" type="radio" name="cocktail-strength" value="middle-alcohol" checked=""><!--
+              --><label class="fieldset__label" for="middle-alcohol"><span class="fieldset__radio"></span>Полукрепкие (16-22%)</label><!--
+
+              --><input class="fieldset__input" id="high-alcohol" type="radio" name="cocktail-strength" value="high-alcohol"><!--
+              --><label class="fieldset__label" for="high-alcohol"><span class="fieldset__radio"></span>Крепкие (более 22%)</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- subsection base of cocktail -->
+
+        <fieldset class="fieldset fieldset_base-cocktail">
+          <legend class="fieldset__legend-stripe fieldset__legend-stripe_green">На основе:</legend>
+
+          <div class="gradient-border 
+      gradient-border_2rcorners">
+            <div class="fieldset_background-2rc">
+              <div class="fieldset__line-options">
+                <div class="fieldset__slider-elem">
+                  <input class="fieldset__input" id="base-absinthe" type="radio" name="cocktail-base" value="absinthe">
+                  <label class="fieldset__label" for="base-absinthe">Абсента<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="base-vodka" type="radio" name="cocktail-base" value="vodka">
+                  <label class="fieldset__label" for="base-vodka">Водки<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="base-gin" type="radio" name="cocktail-base" value="gin">
+                  <label class="fieldset__label" for="base-gin">Джина<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="base-whiskey" type="radio" name="cocktail-base" value="whiskey">
+                  <label class="fieldset__label" for="base-whiskey">Виски<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="base-brandy" type="radio" name="cocktail-base" value="brandy">
+                  <label class="fieldset__label" for="base-brandy">Бренди<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="base-liquor" type="radio" name="cocktail-base" value="liquor" checked="">
+                  <label class="fieldset__label" for="base-liquor">Ликера<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="base-calvados" type="radio" name="cocktail-base" value="calvados">
+                  <label class="fieldset__label" for="base-calvados">Кальвадоса<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="base-tequila" type="radio" name="cocktail-base" value="tequila">
+                  <label class="fieldset__label" for="base-tequila">Текилы<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="base-rum" type="radio" name="cocktail-base" value="rum">
+                  <label class="fieldset__label" for="base-rum">Рома<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="base-wine" type="radio" name="cocktail-base" value="wine">
+                  <label class="fieldset__label" for="base-wine">Вина<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="base-beer" type="radio" name="cocktail-base" value="beer">
+                  <label class="fieldset__label" for="base-beer">Пива<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="base-baileys" type="radio" name="cocktail-base" value="baileys">
+                  <label class="fieldset__label" for="base-baileys">Бейлиса<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="base-vermouth" type="radio" name="cocktail-base" value="vermouth">
+                  <label class="fieldset__label" for="base-vermouth">Вермута<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="base-cognac" type="radio" name="cocktail-base" value="cognac">
+                  <label class="fieldset__label" for="base-cognac">Коньяка<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="base-curacao" type="radio" name="cocktail-base" value="curacao">
+                  <label class="fieldset__label" for="base-curacao">Кюрасао<span class="fieldset__radio"></span></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider: base of cocktail -->
+          <div class="fieldset__slider slider">
+            <div class="slider__wrapper">
+              <div class="slider__prev-arrow-block">
+                <a class="slider__prevArrow" href="#">
+                  <img src="img/prev_arrow.png" alt="">
+                </a>
+              </div>
+              <div class="slider__next-arrow-block">
+                <a class="slider__nextArrow" href="#">
+                  <img src="img/next_arrow.png" alt="">
+                </a>
+              </div>
+              <div class="slider__zone">
+                <div class="slider__thumb"></div>
+              </div>
+            </div>
+            <div class="fieldset__list"></div>
+            <div class="fieldset__show-list">
+              <span class="fieldset__list-title">Показать списком</span>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- subsection type of cocktail -->
+
+        <fieldset class="fieldset fieldset_type-fieldset">
+          <legend class="fieldset__legend-stripe fieldset__legend-stripe_blue">По типу:</legend>
+
+          <div class="gradient-border 
+      gradient-border_2rcorners">
+            <div class="fieldset_background-2rc">
+              <div class="fieldset__line-options">
+                <div class="fieldset__slider-elem">
+                  <input class="fieldset__input" id="type-aperitifs" type="radio" name="cocktail-type" value="aperitifs">
+                  <label class="fieldset__label" for="type-aperitifs">Аперитивы<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="type-digestives" type="radio" name="cocktail-type" value="digestives">
+                  <label class="fieldset__label" for="type-digestives">Диджестивы<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="type-hot" type="radio" name="cocktail-type" value="hot">
+                  <label class="fieldset__label" for="type-hot">Горячие<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="type-dairy" type="radio" name="cocktail-type" value="dairy">
+                  <label class="fieldset__label" for="type-dairy">Молочные<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="type-dessert" type="radio" name="cocktail-type" value="dessert">
+                  <label class="fieldset__label" for="type-dessert">Десертные<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="type-layered" type="radio" name="cocktail-type" value="layered">
+                  <label class="fieldset__label" for="type-layered">Слоистые<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="type-daisy" type="radio" name="cocktail-type" value="daisy">
+                  <label class="fieldset__label" for="type-daisy">Дейзи<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="type-juleps" type="radio" name="cocktail-type" value="juleps" checked="">
+                  <label class="fieldset__label" for="type-juleps">Джулепы<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="type-cardinals" type="radio" name="cocktail-type" value="cardinals">
+                  <label class="fieldset__label" for="type-cardinals">Кардиналы<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="type-coblers" type="radio" name="cocktail-type" value="coblers">
+                  <label class="fieldset__label" for="type-coblers">Коблеры<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="type-collins" type="radio" name="cocktail-type" value="collins">
+                  <label class="fieldset__label" for="type-collins">Коллинзы<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="type-short" type="radio" name="cocktail-type" value="short">
+                  <label class="fieldset__label" for="type-short">Короткие<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="type-long" type="radio" name="cocktail-type" value="long">
+                  <label class="fieldset__label" for="type-long">Длинные<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="type-fizzes" type="radio" name="cocktail-type" value="fizzes">
+                  <label class="fieldset__label" for="type-fizzes">Физы<span class="fieldset__radio"></span></label>
+
+                  <input class="fieldset__input" id="type-fixes" type="radio" name="cocktail-type" value="fixes">
+                  <label class="fieldset__label" for="type-fixes">Фиксы<span class="fieldset__radio"></span></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider: type of cocktail -->
+          <div class="fieldset__slider slider">
+            <div class="slider__wrapper">
+              <div class="slider__prev-arrow-block">
+                <a class="slider__prevArrow" href="#">
+                  <img src="img/prev_arrow.png" alt="">
+                </a>
+              </div>
+              <div class="slider__next-arrow-block">
+                <a class="slider__nextArrow" href="#">
+                  <img src="img/next_arrow.png" alt="">
+                </a>
+              </div>
+              <div class="slider__zone">
+                <div class="slider__thumb"></div>
+              </div>
+            </div>
+            <div class="fieldset__list"></div>
+            <div class="fieldset__show-list">
+              <span class="fieldset__list-title">Показать списком</span>
+            </div>
+          </div>
+        </fieldset>
+
+      </fieldset>
+
+      <!-- section tags -->
+
+      <fieldset class="fieldset fieldset_tags-field">
+        <legend class="fieldset__legend-square fieldset__legend-square_red">Теги</legend>
+
+        <div class="gradient-border 
+      gradient-border_2rcorners">
+          <div class="fieldset_background-2rc">
+            <div class="fieldset__line-options">
+              <div class="fieldset__slider-elem">
+                <input class="fieldset__input" id="tags-invigorating" type="checkbox" name="cocktail-tags" value="invigorating">
+                <label class="fieldset__label" for="tags-invigorating">Бодрящие<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="tags-bitter" type="checkbox" name="cocktail-tags" value="bitter">
+                <label class="fieldset__label" for="tags-bitter">Горькие<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="tags-for-company" type="checkbox" name="cocktail-tags" value="for-company" checked="">
+                <label class="fieldset__label" for="tags-for-company">Для компании<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="tags-sour" type="checkbox" name="cocktail-tags" value="sour">
+                <label class="fieldset__label" for="tags-sour">Кислые<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="tags-longdrink" type="checkbox" name="cocktail-tags" value="longdrink">
+                <label class="fieldset__label" for="tags-longdrink">Лонгдринк<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="tags-unusual" type="checkbox" name="cocktail-tags" value="unusual">
+                <label class="fieldset__label" for="tags-unusual">Необычные по употреблению<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="tags-vegetable" type="checkbox" name="cocktail-tags" value="vegetable">
+                <label class="fieldset__label" for="tags-vegetable">Овощные<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="tags-fiery" type="checkbox" name="cocktail-tags" value="fiery">
+                <label class="fieldset__label" for="tags-fiery">Огненные<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="tags-refreshing" type="checkbox" name="cocktail-tags" value="refreshing">
+                <label class="fieldset__label" for="tags-refreshing">Освежающие<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="tags-icy" type="checkbox" name="cocktail-tags" value="icy">
+                <label class="fieldset__label" for="tags-icy">Со льдом<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="tags-spicy" type="checkbox" name="cocktail-tags" value="spicy">
+                <label class="fieldset__label" for="tags-spicy">Острые<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="tags-cinnamon" type="checkbox" name="cocktail-tags" value="cinnamon">
+                <label class="fieldset__label" for="tags-cinnamon">С корицей<span class="fieldset__checkbox"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider: tags -->
+        <div class="fieldset__slider slider">
+          <div class="slider__wrapper">
+            <div class="slider__prev-arrow-block">
+              <a class="slider__prevArrow" href="#">
+                <img src="img/prev_arrow.png" alt="">
+              </a>
+            </div>
+            <div class="slider__next-arrow-block">
+              <a class="slider__nextArrow" href="#">
+                <img src="img/next_arrow.png" alt="">
+              </a>
+            </div>
+            <div class="slider__zone">
+              <div class="slider__thumb"></div>
+            </div>
+          </div>
+          <div class="fieldset__list"></div>
+          <div class="fieldset__show-list">
+            <span class="fieldset__list-title">Показать списком</span>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- section glasses -->
+
+      <fieldset class="fieldset fieldset_glasses-field">
+        <legend class="fieldset__legend-square fieldset__legend-square_blue">Бокалы</legend>
+
+        <div class="gradient-border 
+      gradient-border_2rcorners">
+          <div class="fieldset_background-2rc">
+            <div class="fieldset__line-options">
+              <div class="fieldset__slider-elem">
+                <input class="fieldset__input" id="ww-glass" type="radio" name="cocktail-glasses" value="ww-glass">
+                <label class="fieldset__label" for="ww-glass">Бокал для белого вина<span class="fieldset__radio"></span></label>
+
+                <input class="fieldset__input" id="rw-glass" type="radio" name="cocktail-glasses" value="rw-glass">
+                <label class="fieldset__label" for="rw-glass">Бокал для красного вина<span class="fieldset__radio"></span></label>
+
+                <input class="fieldset__input" id="lay-glass" type="radio" name="cocktail-glasses" value="lay-glass">
+                <label class="fieldset__label" for="lay-glass">Бокал для слоистых коктейлей<span class="fieldset__radio"></span></label>
+
+                <input class="fieldset__input" id="sour-glass" type="radio" name="cocktail-glasses" value="sour-glass" checked="">
+                <label class="fieldset__label" for="sour-glass">Бокал сауэр<span class="fieldset__radio"></span></label>
+
+                <input class="fieldset__input" id="harikane-glass" type="radio" name="cocktail-glasses" value="harikane-glass">
+                <label class="fieldset__label" for="harikane-glass">Бокал харикейн<span class="fieldset__radio"></span></label>
+
+                <input class="fieldset__input" id="glasses-glass" type="radio" name="cocktail-glasses" value="glass">
+                <label class="fieldset__label" for="glasses-glass">Граненый стакан<span class="fieldset__radio"></span></label>
+
+                <input class="fieldset__input" id="cognac-glass" type="radio" name="cocktail-glasses" value="cognac-glass">
+                <label class="fieldset__label" for="cognac-glass">Коньячный бокал<span class="fieldset__radio"></span></label>
+
+                <input class="fieldset__input" id="champagne-glass" type="radio" name="cocktail-glasses" value="champagne-glass">
+                <label class="fieldset__label" for="champagne-glass">Фужер для шампанского<span class="fieldset__radio"></span></label>
+
+                <input class="fieldset__input" id="collins-glass" type="radio" name="cocktail-glasses" value="collins-glass">
+                <label class="fieldset__label" for="collins-glass">Коллинз<span class="fieldset__radio"></span></label>
+
+                <input class="fieldset__input" id="liqueur-glass" type="radio" name="cocktail-glasses" value="liqueur-glass">
+                <label class="fieldset__label" for="liqueur-glass">Ликерная рюмка<span class="fieldset__radio"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider: glasses -->
+        <div class="fieldset__slider slider">
+          <div class="slider__wrapper">
+            <div class="slider__prev-arrow-block">
+              <a class="slider__prevArrow" href="#">
+                <img src="img/prev_arrow.png" alt="">
+              </a>
+            </div>
+            <div class="slider__next-arrow-block">
+              <a class="slider__nextArrow" href="#">
+                <img src="img/next_arrow.png" alt="">
+              </a>
+            </div>
+            <div class="slider__zone">
+              <div class="slider__thumb"></div>
+            </div>
+          </div>
+          <div class="fieldset__list"></div>
+          <div class="fieldset__show-list">
+            <span class="fieldset__list-title">Показать списком</span>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- section decorations -->
+
+      <fieldset class="fieldset fieldset_decorations-field">
+        <legend class="fieldset__legend-square fieldset__legend-square_orange">Украшения</legend>
+
+        <div class="gradient-border 
+      gradient-border_2rcorners">
+          <div class="fieldset_background-2rc">
+            <div class="fieldset__line-options">
+              <div class="fieldset__slider-elem">
+                <input class="fieldset__input" id="orange-on-glass" type="checkbox" name="cocktail-decorations" value="orange-on-glass">
+                <label class="fieldset__label" for="orange-on-glass">Апельсин на бокале<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="sprig-mint" type="checkbox" name="cocktail-decorations" value="sprig-mint">
+                <label class="fieldset__label" for="sprig-mint">Веточка мяты<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="cream-cherry" type="checkbox" name="cocktail-decorations" value="cream-cherry">
+                <label class="fieldset__label" for="cream-cherry">Взбитые сливки с вишней<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="grape-skewer" type="checkbox" name="cocktail-decorations" value="grape-skewer">
+                <label class="fieldset__label" for="grape-skewer">Виноград на шпажке<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="cherry-skewer" type="checkbox" name="cocktail-decorations" value="cherry-skewer">
+                <label class="fieldset__label" for="cherry-skewer">Вишенка на шпажке<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="slice-tangerine" type="checkbox" name="cocktail-decorations" value="slice-tangerine" checked="">
+                <label class="fieldset__label" for="slice-tangerine">Долька мандарина<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="orange-zest" type="checkbox" name="cocktail-decorations" value="orange-zest">
+                <label class="fieldset__label" for="orange-zest">Цедра апельсина<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="pineapple-slice" type="checkbox" name="cocktail-decorations" value="pineapple-slice">
+                <label class="fieldset__label" for="pineapple-slice">Кусочек ананаса<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="strawberry" type="checkbox" name="cocktail-decorations" value="strawberry">
+                <label class="fieldset__label" for="strawberry">Клубника<span class="fieldset__checkbox"></span></label>
+
+                <input class="fieldset__input" id="cocktail-decorations" type="checkbox" name="cocktail-decorations" value="olive">
+                <label class="fieldset__label" for="cocktail-decorations">Оливка<span class="fieldset__checkbox"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider: decorations -->
+        <div class="fieldset__slider slider">
+          <div class="slider__wrapper">
+            <div class="slider__prev-arrow-block">
+              <a class="slider__prevArrow" href="#">
+                <img src="img/prev_arrow.png" alt="">
+              </a>
+            </div>
+            <div class="slider__next-arrow-block">
+              <a class="slider__nextArrow" href="#">
+                <img src="img/next_arrow.png" alt="">
+              </a>
+            </div>
+            <div class="slider__zone">
+              <div class="slider__thumb"></div>
+            </div>
+          </div>
+          <div class="fieldset__list"></div>
+          <div class="fieldset__show-list">
+            <span class="fieldset__list-title">Показать списком</span>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- buttons -->
+
+      <button class="form__button" type="submit">Добавить</button>
+      <button class="form__button" type="reset">Начать заново</button>
+
+    </div>
+  </form>
+
+</body>
+</html>
