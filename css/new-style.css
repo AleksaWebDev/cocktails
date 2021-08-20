@@ -979,7 +979,7 @@ body {
 
 @media (max-width: 950px) {
   .fieldset__line-options {
-    max-width: calc(100vw - 74px);
+    max-width: calc(100vw - 100px);
   }
 }
   
